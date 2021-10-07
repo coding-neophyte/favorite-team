@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import TeamPage from './TeamPage'
+import CreateTeam from './CreateTeam';
+import { NavLink } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import EditPage from './EditPage';
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <header>
+            <NavLink to="/" className="link"> Home </NavLink>
+            <NavLink to="/create" className="link"> Create </NavLink>
+          </header>
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={(routerProps) => <TeamPage {...routerProps} />} //list Page
+            />
+            <Route
+              path="/create"
+              exact
+              render={(routerProps) => <CreateTeam {...routerProps} />} //create page
+            />
+            <Route
+              path="/edit/:id"
+              exact
+              render={(routerProps) => <EditPage {...routerProps} />} //details / edit page
+            />
+
+          </Switch>
+        </Router>
+      </div>
+    )
+  }
 }
-
-export default App;

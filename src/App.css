@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,78 @@
   to {
     transform: rotate(360deg);
   }
+}
+img{
+  height: 500px;
+  width: 500px;
+}
+
+.team-div{
+  display: flex;
+  flex-wrap: wrap;
+  background-color:burlywood;
+}
+
+.team-div img{
+  width: 270px;
+  height: 250px;
+}
+.teamInfo{
+
+    width: 280px;
+    height: 200;
+    border: solid 1px black;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+
+.submit{
+  height: 40px;
+  width: 75px;
+  margin-top: 20px;
+  background-color:darkblue;
+  color: white;
+  border-style: solid;
+  border-radius: 5px;
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 20px;
+}
+
+.submit:hover{
+  background-color: white;
+  color: darkblue;
+}
+
+input{
+  width: 20%;
+  text-align: center;
+  border: 2px solid darkblue;
+  border-radius: 4px;
+}
+
+h1{
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.link{
+  margin: 5px;
+}
+
+p{
+  font-family: 'Bebas Neue', cursive;
+  padding: 5px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.editLinks{
+  display: flex;
+  flex-wrap: wrap;
 }
