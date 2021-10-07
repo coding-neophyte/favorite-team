@@ -34,7 +34,7 @@ export default class CreateTeam extends Component {
                 category_id: this.state.category_id
 
             })
-        this.props.history.push(`/`)
+        this.props.history.push(`/`) // links back to home page
     };
     handleName = (e) =>
         this.setState({ name: e.target.value })
